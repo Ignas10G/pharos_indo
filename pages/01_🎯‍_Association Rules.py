@@ -47,7 +47,8 @@ if option == 'Februari':
 
     # Use FP-Growth to generate association rules
     frequent_itemsets = fpgrowth(df_tr, min_support=0.1, use_colnames=True)
-    rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
+    if len(frequent_itemsets) > 0:
+        rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
 
     # Display the association rules
     if len(frequent_itemsets) > 0:
@@ -72,7 +73,8 @@ elif option == 'Maret':
 
     # Use FP-Growth to generate association rules
     frequent_itemsets = fpgrowth(df_tr, min_support=0.1, use_colnames=True)
-    rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
+    if len(frequent_itemsets) > 0:
+        rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
 
     # Display the association rules
     if len(frequent_itemsets) > 0:
@@ -97,7 +99,8 @@ elif option == 'April':
 
     # Use FP-Growth to generate association rules
     frequent_itemsets = fpgrowth(df_tr, min_support=0.1, use_colnames=True)
-    rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
+    if len(frequent_itemsets) > 0:
+        rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
 
     # Display the association rules
     if len(frequent_itemsets) > 0:
