@@ -50,8 +50,8 @@ if option == 'Februari':
     if len(frequent_itemsets) > 0:
         st.write(frequent_itemsets, use_container_width=True)
         rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
-    if len(rules) > 0:
-        st.write(rules, use_container_width=True)
+        if len(rules) > 0:
+                st.write(rules, use_container_width=True)
 
 elif option == 'Maret':
     data_month = data_apriori[data_apriori['month'] == 3]
@@ -73,8 +73,8 @@ elif option == 'Maret':
     if len(frequent_itemsets) > 0:
         st.write(frequent_itemsets, use_container_width=True)
         rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
-    if len(rules) > 0:
-        st.write(rules, use_container_width=True)
+        if len(rules) > 0:
+                st.write(rules, use_container_width=True)
 
 elif option == 'April':
     data_month = data_apriori[data_apriori['month'] == 4]
@@ -96,5 +96,5 @@ elif option == 'April':
     if len(frequent_itemsets) > 0:
         st.write(frequent_itemsets, use_container_width=True)
         rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
-    if len(rules) > 0:
-        st.write(rules, use_container_width=True)
+        if len(rules) > 0:
+                st.write(rules, use_container_width=True)
