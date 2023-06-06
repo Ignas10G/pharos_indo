@@ -1,0 +1,12 @@
+joblib==1.2.0
+matplotlib==3.7.1
+mlxtend==0.22.0
+numpy==1.24.3
+openpyxl==3.1.2
+pandas==2.0.2
+plotly==5.14.1
+scikit-learn==1.2.2
+seaborn==0.12.2
+streamlit==1.23.1
+streamlit-extras==0.2.7
+xlrd==2.0.1
