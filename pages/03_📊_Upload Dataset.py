@@ -133,6 +133,8 @@ try:
                 use_container_width=True
             )
             
+            df_cluster['month'] = df_cluster['TimeRecorded'].dt.month
+            
             # PIE CHART PROPORSI CLUSTER
             prop_cluster = df_cluster.groupby('Cluster')['Cluster'].count()
             prop_cluster = pd.DataFrame(prop_cluster).rename(columns={'Cluster':'Jumlah'})
