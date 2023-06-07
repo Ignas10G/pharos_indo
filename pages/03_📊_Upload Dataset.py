@@ -14,6 +14,7 @@ from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, fpgrowth, association_rules
 from sklearn.cluster import KMeans
 import pickle
+import plotly.express as px
 
 # SET PAGE
 st.set_page_config(page_title="PT Pharos Indonesia Web App", layout="wide")
