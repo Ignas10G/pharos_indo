@@ -19,7 +19,7 @@ from mlxtend.frequent_patterns import apriori, fpgrowth, association_rules
 st.set_page_config(page_title="PT Pharos Indonesia Web App", layout="wide")
 
 # SET HEADER
-st.header('Asosiasi Rules dengan Apriori FPGrowth')
+st.header('Asosiasi Rules dengan Apriori')
 st.markdown('<hr>', unsafe_allow_html=True)
 
 # LOAD DATA
@@ -46,7 +46,7 @@ if option == 'Februari':
     df_tr = pd.DataFrame(te_ary, columns=te.columns_)
 
     # Use FP-Growth to generate association rules
-    frequent_itemsets = fpgrowth(df_tr, min_support=0.1, use_colnames=True)
+    frequent_itemsets = apriori(df_tr, min_support=0.1, use_colnames=True)
     if len(frequent_itemsets) > 0:
         st.write(frequent_itemsets, use_container_width=True)
         rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
@@ -69,7 +69,7 @@ elif option == 'Maret':
     df_tr = pd.DataFrame(te_ary, columns=te.columns_)
 
     # Use FP-Growth to generate association rules
-    frequent_itemsets = fpgrowth(df_tr, min_support=0.1, use_colnames=True)
+    frequent_itemsets = apriori(df_tr, min_support=0.1, use_colnames=True)
     if len(frequent_itemsets) > 0:
         st.write(frequent_itemsets, use_container_width=True)
         rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
@@ -92,7 +92,7 @@ elif option == 'April':
     df_tr = pd.DataFrame(te_ary, columns=te.columns_)
 
     # Use FP-Growth to generate association rules
-    frequent_itemsets = fpgrowth(df_tr, min_support=0.1, use_colnames=True)
+    frequent_itemsets = apriori(df_tr, min_support=0.1, use_colnames=True)
     if len(frequent_itemsets) > 0:
         st.write(frequent_itemsets, use_container_width=True)
         rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
