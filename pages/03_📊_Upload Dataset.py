@@ -101,7 +101,7 @@ try:
             df_tr = pd.DataFrame(te_ary, columns=te.columns_)
 
             # Use FP-Growth to generate association rules
-            frequent_itemsets = fpgrowth(df_tr, min_support=0.1, use_colnames=True)
+            frequent_itemsets = apriori(df_tr, min_support=0.1, use_colnames=True)
             rules = association_rules(frequent_itemsets, metric="confidence", min_threshold=0)
             if len(frequent_itemsets) > 0:
                 st.write(frequent_itemsets, use_container_width=True)
